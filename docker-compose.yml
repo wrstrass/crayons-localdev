@@ -1,1 +1,10 @@
 version: '3'
+
+services:
+  web:
+    image: nginx
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+      - ./crayons-frontend/:/data/
+    ports:
+      - "8080:80"
