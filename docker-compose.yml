@@ -10,3 +10,10 @@ services:
       - .env
     ports:
       - "${PORT}:${PORT}"
+    networks:
+      - crayons
+
+networks:
+  crayons:
+    name: crayons
+    driver: bridge
